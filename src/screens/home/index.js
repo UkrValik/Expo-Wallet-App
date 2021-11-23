@@ -6,7 +6,7 @@ const Home = (props) => {
     return (
         <View style={styles.container}>
             <Text>
-                Home Screen
+                Home third
             </Text>
         </View>
     );
