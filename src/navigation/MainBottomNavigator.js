@@ -8,7 +8,7 @@ import Settings from '../screens/settings';
 
 const Tab = createBottomTabNavigator();
 
-const MainBottomNavigator = () => {
+const MainBottomNavigator = (props) => {
     return (
         <Tab.Navigator>
             <Tab.Screen name='Home' component={Home} />

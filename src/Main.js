@@ -1,13 +1,13 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 
-import MainBottomNavigator from './navigation/MainBottomNavigator';
+import MainStackNavigator from './navigation/MainStackNavigator';
 
-const Main = () => {
+const Main = (props) => {
 
     return (
         <NavigationContainer>
-            <MainBottomNavigator />
+            <MainStackNavigator />
         </NavigationContainer>
     );
 }

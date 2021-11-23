@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Button } from 'react-native';
 
 const SignUp = (props) => {
 
@@ -8,6 +8,10 @@ const SignUp = (props) => {
             <Text>
                 SignUp Screen
             </Text>
+            <Button 
+                title='Зареєструватися'
+                onPress={() => props.navigation.navigate('Main')}
+                />
         </View>
     );
 }
