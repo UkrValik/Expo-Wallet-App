@@ -6,7 +6,7 @@ const Flash = (props) => {
     return (
         <View style={styles.container}>
             <Text>
-                Flash Screen
+                This is Flash
             </Text>
         </View>
     );
