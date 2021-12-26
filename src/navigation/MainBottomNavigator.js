@@ -6,13 +6,17 @@ import History from '../screens/history';
 import Statistics from '../screens/statistics';
 import Settings from '../screens/settings';
 import HomeStackNavigator from './HomeStackNavigator';
+<<<<<<< HEAD
 import colors from '../../assets/colors.json';
+=======
+>>>>>>> 694d6474e40ca4fec75d7267a52203441504b972
 
 const Tab = createBottomTabNavigator();
 
 const MainBottomNavigator = (props) => {
     return (
         <Tab.Navigator screenOptions={{ headerShown: false }}>
+<<<<<<< HEAD
             <Tab.Screen
                 name='HomeStack'
                 component={HomeStackNavigator}
@@ -73,6 +77,12 @@ const MainBottomNavigator = (props) => {
                     ),
                 }}
                 />
+=======
+            <Tab.Screen name='HomeStack' component={HomeStackNavigator} />
+            <Tab.Screen name='History' component={History} />
+            <Tab.Screen name='Statistics' component={Statistics} />
+            <Tab.Screen name='Settings' component={Settings} />
+>>>>>>> 694d6474e40ca4fec75d7267a52203441504b972
         </Tab.Navigator>
     );
 }
