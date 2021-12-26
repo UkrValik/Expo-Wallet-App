@@ -1,20 +1,21 @@
 import React from 'react';
-import { View, Text, StyleSheet, Dimensions } from 'react-native';
+import { View, Text, StyleSheet, Dimensions, TouchableOpacity } from 'react-native';
 
 const SCREEN_WIDTH = Dimensions.get('screen').width;
-const SCREEN_HEIGHT = Dimensions.get('screen').height;
 
 const BankCard = (props) => {
 
     return (
-        <View style={styles.container}>
-            <Text style={{fontSize: 24, color: '#fff'}}>
-                {props.wallet.balance}
-            </Text>
-            <Text style={[styles.cardNumber], {color: props.wallet.color}}>
-                {props.wallet.cardNumber}
-            </Text>
-        </View>
+        <TouchableOpacity onPress={props.onPress}>
+            <View style={[styles.container, {backgroundColor: props.highlight ? '#777' : '#000'}]}>
+                <Text style={{fontSize: 24, color: '#fff'}}>
+                    {props.wallet.value}
+                </Text>
+                <Text style={[styles.cardNumber], {color: props.wallet.color}}>
+                    {props.wallet.name}
+                </Text>
+            </View>
+        </TouchableOpacity>
     );
 }
 

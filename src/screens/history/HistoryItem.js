@@ -9,9 +9,9 @@ const HistoryItem = (props) => {
             <View style={styles.valueContainer}>
                 <View>
                     <View style={styles.valueBlock}>
-                        <Text style={styles.sign}>
+                        {/* <Text style={styles.sign}>
                             {props.transaction.sign}
-                        </Text>
+                        </Text> */}
                         <Text style={styles.value}>
                             {props.transaction.value}
                         </Text>
@@ -28,7 +28,7 @@ const HistoryItem = (props) => {
                             size={24}
                             />
                     </TouchableOpacity>
-                    <TouchableOpacity>
+                    <TouchableOpacity onPress={props.onDelete}>
                         <Ionicons
                             name='remove-circle-outline'
                             color='#000'

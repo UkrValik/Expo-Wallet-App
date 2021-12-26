@@ -1,5 +1,6 @@
 import React from 'react';
 import { Text, View, StyleSheet, Dimensions, TouchableOpacity } from 'react-native';
+import { Ionicons } from '@expo/vector-icons';
 
 import colors from '../../../assets/colors.json';
 
@@ -14,9 +15,11 @@ const AddWalletButton = (props) => {
     return (
         <TouchableOpacity onPress={() => navigateToAddWalletScreen(props.navigation)}>
             <View style={styles.container}>
-                <Text style={styles.title}>
-                    Add Wallet
-                </Text>
+                <Ionicons
+                    name='add'
+                    color='#000'
+                    size={50}
+                    />
             </View>
         </TouchableOpacity>
     );
@@ -27,7 +30,7 @@ const styles = StyleSheet.create({
         borderRadius: 10,
         borderWidth: 5,
         borderColor: '#000',
-        backgroundColor: colors.background,
+        backgroundColor: '#fff',
         width: SCREEN_WIDTH / 2 - 22.5,
         height: SCREEN_WIDTH / 4 - 2.5,
         justifyContent: 'center',
