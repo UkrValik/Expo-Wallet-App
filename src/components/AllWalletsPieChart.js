@@ -22,11 +22,7 @@ const AllWalletsPieChart = (props) => {
                     },
                     color: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
                 }}
-<<<<<<< HEAD
                 accessor='value'
-=======
-                accessor='balance'
->>>>>>> 694d6474e40ca4fec75d7267a52203441504b972
                 backgroundColor='transparent'
                 />
         </View>
