@@ -50,19 +50,23 @@ const Home = (props) => {
     const walletPairsPairs = pairsFromArray(walletPairs);
     if (getPairPairLength(walletPairsPairs[walletPairsPairs.length - 2]) < 4) walletPairsPairs.pop();
     
+    const onWalletPress = (wallet) => {
+        props.navigation.navigate('EditWallet', { wallet });
+    }
+
     const renderCarousel = ({item, index}) => (
         <View style={styles.unvisibleCardArea}>
             {item.map(pair => (
                     <View key={pair[0]?.id || pair.length} style={styles.cardPair}>
                         {pair.length === 2 &&
                             <>
-                                <BankCard wallet={pair[0]} />
-                                <BankCard wallet={pair[1]} />
+                                <BankCard wallet={pair[0]} onPress={() => onWalletPress(pair[0])} />
+                                <BankCard wallet={pair[1]} onPress={() => onWalletPress(pair[1])} />
                             </>
                         }
                         {pair.length === 1 &&
                             <>
-                                <BankCard wallet={pair[0]} />
+                                <BankCard wallet={pair[0]} onPress={() => onWalletPress(pair[0])} />
                                 <AddWalletButton navigation={props.navigation} />
                             </>
                         }
